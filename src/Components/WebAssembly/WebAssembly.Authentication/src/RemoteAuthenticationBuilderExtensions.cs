@@ -12,7 +12,7 @@ namespace Microsoft.Extensions.DependencyInjection
     public static class RemoteAuthenticationBuilderExtensions
     {
         /// <summary>
-        /// Replaces the existing <see cref="UserFactory{TAccount}"/> with the user factory defined by <typeparamref name="TUserFactory"/>.
+        /// Replaces the existing <see cref="AccountClaimsPrincipalFactory{TAccount}"/> with the user factory defined by <typeparamref name="TUserFactory"/>.
         /// </summary>
         /// <typeparam name="TRemoteAuthenticationState">The remote authentication state.</typeparam>
         /// <typeparam name="TAccount">The account type.</typeparam>
@@ -31,7 +31,7 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Replaces the existing <see cref="UserFactory{Account}"/> with the user factory defined by <typeparamref name="TUserFactory"/>.
+        /// Replaces the existing <see cref="AccountClaimsPrincipalFactory{TAccount}"/> with the user factory defined by <typeparamref name="TUserFactory"/>.
         /// </summary>
         /// <typeparam name="TRemoteAuthenticationState">The remote authentication state.</typeparam>
         /// <typeparam name="TUserFactory">The new user factory type.</typeparam>
@@ -43,7 +43,7 @@ namespace Microsoft.Extensions.DependencyInjection
             where TUserFactory : UserFactory<RemoteUserAccount> => builder.AddUserFactory<TRemoteAuthenticationState, RemoteUserAccount, TUserFactory>();
 
         /// <summary>
-        /// Replaces the existing <see cref="UserFactory{TAccount}"/> with the user factory defined by <typeparamref name="TUserFactory"/>.
+        /// Replaces the existing <see cref="AccountClaimsPrincipalFactory{TAccount}"/> with the user factory defined by <typeparamref name="TUserFactory"/>.
         /// </summary>
         /// <typeparam name="TUserFactory">The new user factory type.</typeparam>
         /// <param name="builder">The <see cref="IRemoteAuthenticationBuilder{RemoteAuthenticationState, Account}"/>.</param>

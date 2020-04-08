@@ -43,7 +43,7 @@ namespace Microsoft.AspNetCore.Components.WebAssembly.Authentication
         protected NavigationManager Navigation { get; }
 
         /// <summary>
-        /// Gets the <see cref="UserFactory{TAccount}"/> to map accounts to <see cref="ClaimsPrincipal"/>.
+        /// Gets the <see cref="AccountClaimsPrincipalFactory{TAccount}"/> to map accounts to <see cref="ClaimsPrincipal"/>.
         /// </summary>
         protected UserFactory<TAccount> UserFactory { get; }
 
@@ -58,7 +58,7 @@ namespace Microsoft.AspNetCore.Components.WebAssembly.Authentication
         /// <param name="jsRuntime">The <see cref="IJSRuntime"/> to use for performing JavaScript interop operations.</param>
         /// <param name="options">The options to be passed down to the underlying JavaScript library handling the authentication operations.</param>
         /// <param name="navigation">The <see cref="NavigationManager"/> used to generate URLs.</param>
-        /// <param name="userFactory">The <see cref="UserFactory{TAccount}"/> used to generate the <see cref="ClaimsPrincipal"/> for the user.</param>
+        /// <param name="userFactory">The <see cref="AccountClaimsPrincipalFactory{TAccount}"/> used to generate the <see cref="ClaimsPrincipal"/> for the user.</param>
         public RemoteAuthenticationService(
             IJSRuntime jsRuntime,
             IOptions<RemoteAuthenticationOptions<TProviderOptions>> options,
